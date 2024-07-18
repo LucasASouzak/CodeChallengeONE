@@ -1,30 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador de Texto</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    <header>Desafio One-T7</header>
-    <main>
-        <section>
-            <div>
-                <label for="texto">Digite seu texto.</label>
-                <textarea id="texto">"Insira o texto codificado aqui"</textarea>
-            </div>
-            <div class="botao">
-                <button class="botao_criptografar">Criptografar</button>
-                <button class="botao_descriptografar">Descriptografar</button>
-            </div>
-            <div class="saida_texto">
-                <img class="imagem"  src="assets/lamp.png" alt="Ilustração de uma lâmpada incandescente,com filamento visível e base metálica em formato de torneira.">
-                <label for="saida_codificador">Texto decodificado:</label>
-                <textarea id="saida_codificador" placeholder="Retorno do codificador"></textarea>
+<body>   
+    <header class="cabecalho">
+        <img class="cabecalho_logo" src="assets/Logo.png" alt="Logo Alura">
+        <h1 class="cabecalho_titulo">One-T7</h1> 
+    </header>
+
+    <main class="conteudo-principal"> 
+        <section class="secao-esquerda">
+            <h2>Digite seu texto</h2>
+            <p class="instrucoes">Apenas letras minúsculas e sem acento.</p>
+            <textarea class="caixa-texto" placeholder="Digite seu texto..."></textarea>
+            <div class="botoes">
+                <button class="botao criptografar">Criptografar</button>
+                <button class="botao descriptografar">Descriptografar</button>
             </div>
         </section>
+
+        <section class="secao-direita">         
+
+            <div class="mensagem-inicial">
+                <h3>Nenhuma mensagem encontrada</h3>
+                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+
+            <div class="corpo_saida_texto"> 
+                <div class="retangulo"></div> 
+                <img class="imagem-busca" src="assets/High quality products 1 1.png" 
+                 alt="Ilustração de uma pessoa buscando algo com uma lupa">
+                <label for="saida_codificador">Texto decodificado:</label>
+                <textarea id="saida_codificador" placeholder="Retorno do codificador"></textarea>
+            </div> <textarea class="saida-texto" readonly placeholder="Resultado..."></textarea>
+        </section>
     </main>
-    <script src="app.js"></script>
-    <footer>Desenvolvido por LucasASouzak</footer>
+
+    <footer>
+        <p class="rodape">Desenvolvido por LucasASouzak</p>
+        <img src="assets/LSK LOGO.png" class="rodape_logo" alt="Logo do Desenvolvedor">
+    </footer>
 </body>
 </html>

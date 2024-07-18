@@ -1,5 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
+    --cor-primaria:#E5E5E5;
+    --cor-secundaria:#0A3871;
+    --cor-terciaria:#000000;
+    --cor-botaocriptografar:#0A3871;
+    --cor-botaodescriptografar:#D8DFE8;
+    --cor-hover1:#D8DFE8;
+    --cor-hover2:#0A3871;
+
+    --cor-letras:#FFFFFF;
+
+    --fonte-bold:'Inter', sans-serif;
+   
+}
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
     
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: center;
+}
+.cabecalho_logo{
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    width: 7.5rem;
+    height: 2.5rem;
+    
+}
+.cabecalho_titulo{
+    position: absolute;
+    justify-content: center;
+    top: 2.5rem;
+}
+
+.conteudo-principal{
+    min-height: 100vh;
+    margin: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.retangulo{
+    padding-top: 3rem;
+    padding-left: 2.5rem;
+    background-color: #FFFFFF; 
+    border-radius: 2rem;
+    width: 25rem;
+    height: 59rem;
+}
+.corpo_conteudo{
+    width: 50%;
+    font-optical-sizing: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.corpo_conteudo_conteiner{
+    width: 42.5rem;
+}
+.corpo_conteudo_instrução{
+    content: ""; /* O elemento pseudo precisa de um content */
+    position: absolute;
+    margin-top: 168px;
+    margin-left: 240px;
+    border-bottom: 10px solid black; /* Define a cor e espessura da "sombra" do corte */
+    border-left: 10px solid transparent; /* Cria o corte transparente */
+}
+
+.corpo_botao{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.imagem-busca{
+    position: absolute;
+    top: 17.6875rem;
+    right: 4.5rem;
+    width: 21rem;
+    height: 19rem;
+    
+}
+
+
+
+.rodape{
+    text-align: right;
+    font-family: var(--fonte-bold);
+    padding: 1rem;
+    color: var(--cor-letras) ;
+    background-color: var(--cor-secundaria);
+    bottom: 1px;
+}
+
+.rodape_logo{
+    position: absolute;
+    bottom: 1rem;
+    right: 2.5rem;
+    height: 8%;
 }
