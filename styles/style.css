@@ -17,16 +17,17 @@
 *{
     margin: 0%;
     padding: 0%;
+    box-sizing: border-box;
 }
 body{
-    
-    box-sizing: border-box;
+    height: 100vh;
     background-color: var(--cor-primaria);
+    font-family: var(--fonte-bold);
 }
 
 .cabecalho{
-    display: flex;
-    justify-content: center;
+    padding: 2.5rem;
+    
 }
 .cabecalho_logo{
     position: absolute;
@@ -37,59 +38,173 @@ body{
     
 }
 .cabecalho_titulo{
-    position: absolute;
+    display: flex;
     justify-content: center;
-    top: 2.5rem;
+    font-size: 1.5rem;
 }
 
 .conteudo-principal{
-    min-height: 100vh;
+    position: static;
+    min-height: calc(100hv - 5rem) ;
     margin: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     
 }
+
+.alerta{
+    display: flex;
+    background-color:#495057;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    color:white ;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+.instrucoes{
+    font-family: var(--fonte-bold);
+    font-size: 12px;
+    margin-bottom: 26px;
+    color: #495057;
+
+}
+.secao-esquerda{
+    width: 45%;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    top: ;
+    margin-left: 15rem;
+    font: var(--fonte-bold);
+    font-size: 2rem;
+    font-style: normal;
+}
+.caixa-entrada{
+    position: relative;
+   
+   
+}
+.caixa-texto-container{
+    position: relative;
+    display: inline-block;
+}
+.caixa-texto{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    resize: none;
+}
+
+.botoes{
+    display: flex;
+    gap: 1.5rem;
+}
+.botao-criptografar{
+    flex-direction: row;
+    text-align: center;
+    width:20.5rem ;
+    height: 4.18rem;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    background-color: var(--cor-botaocriptografar);
+    color: var(--cor-letras);
+    border: none;
+    
+}
+
+.botao-descriptografar{
+    flex-direction: row;
+    text-align: center;
+    width:20.5rem ;
+    height: 4.18rem;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    background-color: var(--cor-botaodescriptografar);
+    color: var(--cor-hover2);
+    border: 1px, solid, var(--cor-secundaria)
+}
+.secao-direita{
+position: relative;
+
+
+
+}
+.mensagem-inicial{
+    position: relative;
+    align-items: center;
+    top: 619px;
+    width: 336px;   
+    height: 122px;
+
+}
+.resultado{
+    background-color: #FFFFFF;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    display: none;
+}
+.resultado textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.botao-copiar{
+    width: 336px;
+    height: 67px;
+    font-family: var(--fonte-bold);
+    font-size: 16px;
+    font-style: normal;
+    border-radius: 24px;
+}
 .retangulo{
-    padding-top: 3rem;
-    padding-left: 2.5rem;
+    position: relative;
     background-color: #FFFFFF; 
     border-radius: 2rem;
     width: 25rem;
     height: 59rem;
+    text-align: center;
+    z-index: 1;
 }
-.corpo_conteudo{
-    width: 50%;
-    font-optical-sizing: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+.mensagem-inicial-titulo{
+    padding-left: 2.5rem;
+    font-family: var(--fonte-bold);
+    font-size: 1.5rem;
+    color: var(--cor-terciaria);
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
-.corpo_conteudo_conteiner{
-    width: 42.5rem;
-}
-.corpo_conteudo_instrução{
-    content: ""; /* O elemento pseudo precisa de um content */
-    position: absolute;
-    margin-top: 168px;
-    margin-left: 240px;
-    border-bottom: 10px solid black; /* Define a cor e espessura da "sombra" do corte */
-    border-left: 10px solid transparent; /* Cria o corte transparente */
+.mensagem-inicial-paragrafo{   
+    padding-left: 2.5rem;
+    text-align: center;
+    font-family: var(--fonte-bold);
+    font-style: normal;
+    font-size: 1rem;
+    color: var(--cor-terciaria);
 }
 
-.corpo_botao{
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
 .imagem-busca{
     position: absolute;
     top: 17.6875rem;
-    right: 4.5rem;
-    width: 21rem;
+    padding-left: 2.5rem;
+    width: 20.99rem;
     height: 19rem;
+    z-index: 2;
     
 }
 
@@ -103,10 +218,14 @@ body{
     background-color: var(--cor-secundaria);
     bottom: 1px;
 }
-
-.rodape_logo{
-    position: absolute;
-    bottom: 1rem;
-    right: 2.5rem;
-    height: 8%;
+.rodape_link{
+    text-align: right;
+    font-family: var(--fonte-bold);
+    text-decoration: none;
+    padding: 1rem;
+    color: var(--cor-letras) ;
+    background-color: var(--cor-secundaria);
+    bottom: 1px;
 }
+
+
