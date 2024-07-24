@@ -27,12 +27,11 @@ body{
 
 .cabecalho{
     padding: 2.5rem;
-    
+    display: flex;
+    align-items: center;
+    gap: 10%;
 }
 .cabecalho_logo{
-    position: absolute;
-    top: 2.5rem;
-    left: 2.5rem;
     width: 7.5rem;
     height: 2.5rem;
     
@@ -44,72 +43,73 @@ body{
 }
 
 .conteudo-principal{
-    position: static;
     min-height: calc(100hv - 5rem) ;
-    margin: 2.5rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     
 }
 
 .alerta{
-    display: flex;
-    background-color:#495057;
+    display: inline-block; 
+    background-color: #495057;
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    color:white ;
-    justify-content: center;
-    align-items: center;
+    color: white;
+    text-align: center;
+    line-height: 16px; 
     font-family: 'Courier New', Courier, monospace;
     font-weight: 700;
+    margin-right: 5px; 
+}
+.secao-esquerda{
+   display: flex;
+   flex-direction: column;
+    
+}
+.caixa-entrada{
+    position: relative;
+    margin-bottom: 30rem;
+    margin-left: 240px;
+    width: 680px;
+    justify-self: unset;
+}
+.caixa-texto-area{
+    height: 240px;
+    overflow-y: auto;
+}
+.caixa-texto-container{
+    font-family: var(--fonte-bold);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 200px;
+    width: 680px; 
+}  
+.caixa-texto{
+    width: 680px;
+    height: 240px;
+    border: none;
+    padding: 1rem;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    resize: none;
+    display: none; 
 }
 .instrucoes{
     font-family: var(--fonte-bold);
     font-size: 12px;
     margin-bottom: 26px;
+    margin-left: 250px;
     color: #495057;
 
 }
-.secao-esquerda{
-    width: 45%;
-    position: relative;
-    display:flex;
-    flex-direction: column;
-    top: ;
-    margin-left: 15rem;
-    font: var(--fonte-bold);
-    font-size: 2rem;
-    font-style: normal;
-}
-.caixa-entrada{
-    position: relative;
-   
-   
-}
-.caixa-texto-container{
-    position: relative;
-    display: inline-block;
-}
-.caixa-texto{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    background: transparent;
-    padding: 0;
-    font-size: inherit;
-    font-family: inherit;
-    color: inherit;
-    resize: none;
-}
-
 .botoes{
     display: flex;
     gap: 1.5rem;
+    margin-left: 240px;
 }
 .botao-criptografar{
     flex-direction: row;
@@ -136,9 +136,10 @@ body{
     border: 1px, solid, var(--cor-secundaria)
 }
 .secao-direita{
-position: relative;
-
-
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 .mensagem-inicial{
@@ -164,23 +165,61 @@ position: relative;
     border-radius: 0.5rem;
     padding: 1rem;
 }
+.botoes-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 .botao-copiar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 336px;
     height: 67px;
     font-family: var(--fonte-bold);
     font-size: 16px;
     font-style: normal;
     border-radius: 24px;
+    
+}
+.reset{
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    display: flex;
+    width: 84px;
+    height: 42px;
+    font-family: var(--fonte-bold);
+    font-size: auto;
+    border-radius: 15px;
+    cursor: pointer;
+    
+}
+.reset a{
+    text-decoration: none;
+    color: inherit;
 }
 .retangulo{
     position: relative;
+    margin-bottom: 1rem;
     background-color: #FFFFFF; 
     border-radius: 2rem;
     width: 25rem;
     height: 59rem;
     text-align: center;
     z-index: 1;
+
 }
+.imagem-busca{
+    position: absolute;
+    top: 17.6875rem;
+    padding-left: 2.5rem;
+    width: 20.99rem;
+    height: 19rem;
+    z-index: 2; 
+}
+
 .mensagem-inicial-titulo{
     padding-left: 2.5rem;
     font-family: var(--fonte-bold);
@@ -198,17 +237,6 @@ position: relative;
     color: var(--cor-terciaria);
 }
 
-.imagem-busca{
-    position: absolute;
-    top: 17.6875rem;
-    padding-left: 2.5rem;
-    width: 20.99rem;
-    height: 19rem;
-    z-index: 2;
-    
-}
-
-
 
 .rodape{
     text-align: right;
@@ -216,7 +244,7 @@ position: relative;
     padding: 1rem;
     color: var(--cor-letras) ;
     background-color: var(--cor-secundaria);
-    bottom: 1px;
+    
 }
 .rodape_link{
     text-align: right;
@@ -225,7 +253,261 @@ position: relative;
     padding: 1rem;
     color: var(--cor-letras) ;
     background-color: var(--cor-secundaria);
-    bottom: 1px;
 }
 
+@media (max-width: 768px) {
 
+    body{
+        
+        padding-bottom: 2px;
+    }
+    
+
+     .cabecalho {
+        box-sizing: border-box;
+        padding: 2%; 
+        gap: 2%;
+        align-items: center;
+        
+        
+    }
+    
+    .cabecalho_logo{
+        padding: 5%;
+        display: flex;
+        align-items: center;
+        width: 3.5rem;
+        height: 1.5rem;
+        
+                
+      }   
+      .cabecalho_titulo {
+        max-width: 100%;
+        font-size: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1%;        
+      }
+         
+      .conteudo-principal {
+        height: calc(100vh - 1.5rem - 5.25rem);
+        display: flex;
+       flex-direction: column;
+       width: 100%;
+                     
+      }
+      .secao-direita, .secao-esquerda{
+        width:100% ;
+        display: flex;
+        margin-bottom: 2rem;
+        align-items: center;
+        
+    }
+      .retangulo{    
+            
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+      }  
+      .caixa-entrada{
+        max-width: 100%;
+        margin: 0%;
+        
+      }
+      .caixa-texto-container {
+        width: 100%;
+      }
+      .instrucoes{
+        margin-left: 2%;
+        margin-bottom: 1%;        
+      }
+    
+      .botoes {
+        max-width: 80%;
+        align-items: center;
+        flex-direction: row; 
+        gap: 1%; 
+        padding: 1%;
+        margin: 0%;
+        
+      }
+      .botao-criptografar, .botao-descriptografar{
+        justify-content: space-between;
+        padding: 1%;
+        gap: 1rem;
+        max-width: 80%;
+        font-size: 100%;
+    }
+        
+      .mensagem-inicial{     
+        display: flex;
+        top: 50%;
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+      .mensagem-inicial-titulo,.mensagem-inicial-paragrafo{
+        align-items: center;
+        text-align: center;
+        padding: 0;
+      }
+    
+      .resultado {
+        padding: 1rem; 
+      }
+    
+      .resultado textarea {
+        font-size: 0.9rem; 
+      }
+    
+      .botao-copiar {
+        height: 50px; 
+        font-size: 14px; 
+      }
+      .imagem-busca{
+        display: none;
+       
+      }
+      .rodape{
+        position:fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        height: 84px;        
+      }
+    }
+     
+    @media (max-width: 480px){
+        body{
+        
+            padding-bottom: 2px;
+        }
+        
+    
+         .cabecalho {
+            box-sizing: border-box;
+            padding: 2%; 
+            gap: 2%;
+            align-items: center;
+            justify-content: center;
+            
+            
+        }
+        
+        .cabecalho_logo{
+            padding: 5%;
+            display: flex;
+            align-items: center;
+            width: 3.5rem;
+            height: 1.5rem;
+            
+                    
+          }   
+          .cabecalho_titulo {
+            max-width: 100%;
+            font-size: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 1%;        
+          }
+             
+          .conteudo-principal {
+            height: calc(100vh - 1.5rem - 5.25rem);
+            display: flex;
+           flex-direction: column;
+           width: 100%;
+                         
+          }
+          .secao-direita, .secao-esquerda{
+            width:100% ;
+            display: flex;
+            margin-bottom: 2rem;
+            align-items: center;
+            
+        }
+          .retangulo{    
+                
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: auto;
+          }  
+          .caixa-entrada{
+            max-width: 100%;
+            margin: 0%;
+            
+          }
+          .caixa-texto-container {
+            width: 100%;
+          }
+          .instrucoes{
+            margin-left: 2%;
+            margin-bottom: 1%;        
+          }
+        
+          .botoes {
+            max-width: 80%;
+            flex-direction:column;
+            gap: 1rem; 
+            padding: 1%;
+            margin: 0%;
+            
+          }
+          .botao-criptografar, .botao-descriptografar{
+            justify-content: space-between;
+            padding: 1%;
+            gap: 1rem;
+            max-width: 80%;
+            font-size: 100%;
+        }
+            
+          .mensagem-inicial{     
+            display: flex;
+            top: 50%;
+            flex-direction: column;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+          }
+          .mensagem-inicial-titulo,.mensagem-inicial-paragrafo{
+            align-items: center;
+            text-align: center;
+            padding: 0;
+          }
+        
+          .resultado {
+            padding: 1rem; 
+          }
+        
+          .resultado textarea {
+            font-size: 0.9rem; 
+          }
+        
+          .botao-copiar {
+            max-width: 40%;
+            border-radius: 1rem;
+            font-size: 100%;
+            
+          }
+          .imagem-busca{
+            display: none;
+           
+          }
+          .rodape{
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            height: 84px;        
+          }
+        }
+
+    }
+ 

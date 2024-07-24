@@ -1,4 +1,4 @@
-const caixaTexto = document.getElementById("caixa-texto");
+const caixaTexto = document.querySelector("#caixa-texto-container"); 
 const botaoCriptografar = document.querySelector(".botao-criptografar");
 const botaoDescriptografar = document.querySelector(".botao-descriptografar");
 const botaoCopiar = document.querySelector(".botao-copiar");
@@ -7,15 +7,17 @@ const resultado = document.querySelector(".resultado");
 const saidaCodificador = document.getElementById("saida_codificador");
 
 botaoCriptografar.addEventListener("click", () => {
-    const texto = caixaTexto.value.toLowerCase(); // Garante minúsculas
+    const texto = caixaTexto.textContent.toLowerCase(); 
     const textoCriptografado = criptografar(texto);
     exibirResultado(textoCriptografado);
+    document.querySelector('.imagem-busca').style.display = "none";
 });
 
 botaoDescriptografar.addEventListener("click", () => {
-    const texto = caixaTexto.value;
+    const texto = caixaTexto.textContent; 
     const textoDescriptografado = descriptografar(texto);
     exibirResultado(textoDescriptografado);
+    document.querySelector('.imagem-busca').style.display = "none";
 });
 
 botaoCopiar.addEventListener("click", () => {

@@ -18,8 +18,14 @@
     <main class="conteudo-principal"> 
         <section class="secao-esquerda">
             <div class="caixa-entrada">
-              <h2><label for="caixa-texto">Digite <span class="caixa-texto-container">seu texto</span></label></h2>
-                <textarea id="caixa-texto" class="caixa-texto"></textarea> 
+                <h2>
+                <div class="caixa-texto-area">    
+                  <label for="caixa-texto">
+                     <span id="caixa-texto-container" class="caixa-texto-container" contenteditable="true">Digite seu texto</span>
+                  </label>
+                </div>
+                </h2>
+                <textarea id="caixa-texto" class="caixa-texto" style="display: none;"></textarea> 
             </div>
             <p class="instrucoes"><spam class="alerta">!</spam>Apenas letras minúsculas e sem acento.</p>
             <div class="botoes">
@@ -31,17 +37,20 @@
         <section class="secao-direita">
           <div class="corpo_saida_texto"> 
               <div class="retangulo">
+                <div class="resultado"  style="display: none;">
+                    <label for="saida_codificador">Texto decodificado:</label>
+                    <textarea id="saida_codificador" placeholder="Retorno do codificador"></textarea>
+                    <div class="botoes-container">
+                        <button class="botao-copiar">Copiar</button>
+                        <button class="reset"><a href="index.html">Limpar</a></button>
+                      </div>
+                </div>
                   <div class="mensagem-inicial">
                       <h3 class="mensagem-inicial-titulo">Nenhuma mensagem encontrada</h3>
                       <p class="mensagem-inicial-paragrafo">Digite um texto que você deseja criptografar ou descriptografar.</p>
                   </div>
               </div> 
               <img class="imagem-busca" src="assets/High quality products 1 1.png" alt="Ilustração de uma pessoa buscando algo com uma lupa">
-              <div class="resultado"  style="display: none;">
-              <label for="saida_codificador">Texto decodificado:</label>
-              <button class="botao-copiar">Copia</button>
-              <textarea id="saida_codificador" placeholder="Retorno do codificador"></textarea>
-            </div>
           </div> 
       </section>
     </main>
@@ -49,6 +58,6 @@
    <footer>
     <div class="rodape"> <a class="rodape_link" href="https://helloworld-mu-sable.vercel.app/" target="_blank">Desenvolvido por LucasASouzak</a></div>
 </footer>
-<script src="app.js" defer></script>
+<script src="app.js"></script>
 </body>
 </html>
