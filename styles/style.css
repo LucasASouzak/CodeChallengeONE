@@ -468,6 +468,7 @@ body {
     display: flex;
     margin-bottom: 0.25rem;
     align-items: center;
+    text-align: center;
   }
 
   .retangulo {
