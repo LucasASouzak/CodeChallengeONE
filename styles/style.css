@@ -24,7 +24,6 @@ body{
     background-color: var(--cor-primaria);
     font-family: var(--fonte-bold);
 }
-
 .cabecalho{
     padding: 2.5rem;
     display: flex;
@@ -41,27 +40,12 @@ body{
     justify-content: center;
     font-size: 1.5rem;
 }
-
 .conteudo-principal{
     min-height: calc(100hv - 5rem) ;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     
-}
-
-.alerta{
-    display: inline-block; 
-    background-color: #495057;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    color: white;
-    text-align: center;
-    line-height: 16px; 
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 700;
-    margin-right: 5px; 
 }
 .secao-esquerda{
    display: flex;
@@ -106,6 +90,19 @@ body{
     color: #495057;
 
 }
+.alerta{
+    display: inline-block; 
+    background-color: #495057;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 16px; 
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    margin-right: 5px; 
+}
 .botoes{
     display: flex;
     gap: 1.5rem;
@@ -120,10 +117,9 @@ body{
     font-size: 1rem;
     background-color: var(--cor-botaocriptografar);
     color: var(--cor-letras);
-    border: none;
+    border: 1px, solid, var(--cor-secundaria)
     
 }
-
 .botao-descriptografar{
     flex-direction: row;
     text-align: center;
@@ -142,12 +138,22 @@ body{
     align-items: center;
 
 }
-.mensagem-inicial{
-    position: relative;
+.corpo_saida_texto{ 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    top: 619px;
-    width: 336px;   
-    height: 122px;
+
+}
+.retangulo{
+    position: relative;
+    margin-bottom: 1rem;
+    background-color: #FFFFFF; 
+    border-radius: 2rem;
+    width: 25rem;
+    height: 59rem;
+    text-align: center;
+    z-index: 1;
 
 }
 .resultado{
@@ -200,26 +206,14 @@ body{
     text-decoration: none;
     color: inherit;
 }
-.retangulo{
+.mensagem-inicial{
     position: relative;
-    margin-bottom: 1rem;
-    background-color: #FFFFFF; 
-    border-radius: 2rem;
-    width: 25rem;
-    height: 59rem;
-    text-align: center;
-    z-index: 1;
+    align-items: center;
+    top: 619px;
+    width: 336px;   
+    height: 122px;
 
 }
-.imagem-busca{
-    position: absolute;
-    top: 17.6875rem;
-    padding-left: 2.5rem;
-    width: 20.99rem;
-    height: 19rem;
-    z-index: 2; 
-}
-
 .mensagem-inicial-titulo{
     padding-left: 2.5rem;
     font-family: var(--fonte-bold);
@@ -236,8 +230,14 @@ body{
     font-size: 1rem;
     color: var(--cor-terciaria);
 }
-
-
+.imagem-busca{
+    position: absolute;
+    top: 17.6875rem;
+    padding-left: 2.5rem;
+    width: 20.99rem;
+    height: 19rem;
+    z-index: 2; 
+}
 .rodape{
     text-align: right;
     font-family: var(--fonte-bold);
@@ -255,10 +255,49 @@ body{
     background-color: var(--cor-secundaria);
 }
 
+.cabecalho_logo:hover{
+  -xpedu-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  cursor: pointer;
+}
+.botao-criptografar:hover{
+  -xpedu-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  box-shadow: 4px 3px 10px rgb(120, 126, 126);
+  cursor: pointer; 
+}
+.botao-descriptografar:hover{
+  -xpedu-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  box-shadow: 4px 3px 10px rgb(120, 126, 126);
+  cursor: pointer;
+}
+.botao-copiar:hover{
+  -xpedu-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  box-shadow: 4px 3px 10px rgb(120, 126, 126);
+  cursor: pointer;
+}
+.reset:hover{
+  -xpedu-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  box-shadow: 4px 3px 10px rgb(120, 126, 126);
+  cursor: pointer;
+}
+.rodape_link:hover{
+  color: rgba(14, 207, 255, 0.678);
+  cursor:pointer;
+}
+
 @media (max-width: 768px) {
 
     body{
-        
+        overflow-y: hidden;  
         padding-bottom: 2px;
     }
     
@@ -384,7 +423,7 @@ body{
      
     @media (max-width: 480px){
         body{
-        
+            overflow-y: hidden;        
             padding-bottom: 2px;
         }
         
@@ -424,19 +463,20 @@ body{
                          
           }
           .secao-direita, .secao-esquerda{
-            width:100% ;
+            width:100% ;            
             display: flex;
-            margin-bottom: 2rem;
+            margin-bottom:auto;
             align-items: center;
             
         }
           .retangulo{    
-                
             display: flex;
             justify-content: center;
             align-items: center;
             width: auto;
             height: auto;
+            margin-bottom: 1rem;
+            
           }  
           .caixa-entrada{
             max-width: 100%;
@@ -463,7 +503,7 @@ body{
             justify-content: space-between;
             padding: 1%;
             gap: 1rem;
-            max-width: 80%;
+            max-width: 100%;
             font-size: 100%;
         }
             
@@ -501,7 +541,6 @@ body{
            
           }
           .rodape{
-            bottom: 0;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -510,4 +549,3 @@ body{
         }
 
     }
- 

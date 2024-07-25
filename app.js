@@ -23,7 +23,7 @@ botaoDescriptografar.addEventListener("click", () => {
 botaoCopiar.addEventListener("click", () => {
     navigator.clipboard.writeText(saidaCodificador.value)
         .then(() => {
-            alert("Texto copiado!");
+          
         })
         .catch(err => {
             console.error("Falha ao copiar:", err);
