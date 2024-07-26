@@ -21,9 +21,12 @@
 }
 
 body {
-  height: 80vh;
+  height: 100vh;
   background-color: var(--cor-primaria);
   font-family: var(--fonte-bold);
+  display: flex;
+  flex-direction: column;
+
 }
 
 /* -------------------- Cabeçalho -------------------- */
@@ -47,10 +50,11 @@ body {
 
 /* -------------------- Conteúdo Principal -------------------- */
 .conteudo-principal {
-  min-height: calc(100vh - 5rem);
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  flex-grow: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    padding: 2.5rem; 
 }
 
 /* -------------------- Seção Esquerda -------------------- */
@@ -118,33 +122,45 @@ body {
 .botoes {
   display: flex;
   gap: 1.5rem;
+  margin-top: 1rem;
   margin-left: 15rem;
 }
 
-.botao-criptografar {
-  flex-direction: row;
-  text-align: center;
+
+.botao-criptografar,
+.botao-descriptografar {
   width: 20.5rem;
   height: 4.18rem;
   border-radius: 1.5rem;
+  font-family: var(--fonte-bold);
+  font-weight: 600;
   font-size: 1rem;
+  cursor: pointer;
+  border: 0.06rem solid var(--cor-secundaria);
+  background-color: var(--cor-botaodescriptografar);
+}
+
+.botao-criptografar {
   background-color: var(--cor-botaocriptografar);
   color: var(--cor-letras);
-  border: 0.06rem solid var(--cor-secundaria); /* Corrigindo o valor do border */
 }
-
-.botao-descriptografar {
-  flex-direction: row;
-  text-align: center;
-  width: 20.5rem;
-  height: 4.18rem;
-  border-radius: 1.5rem;
-  font-size: 1rem;
-  background-color: var(--cor-botaodescriptografar);
-  color: var(--cor-hover2);
-  border: 0.06rem solid var(--cor-secundaria); /* Corrigindo o valor do border */
+.botao-copiar,.reset{
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  font-family: var(--fonte-bold);
+  font-weight: 500;
+  border: 0.06rem solid var(--cor-secundaria); 
 }
-
+.reset a{
+  text-decoration: none;
+}
+.botoes-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 /* -------------------- Seção Direita -------------------- */
 .secao-direita {
   width: 45%;
@@ -190,42 +206,6 @@ body {
   border: none;
   border-radius: 0.5rem;
   padding: 1rem;
-}
-
-.botoes-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.botao-copiar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 21rem;
-  height: 4.1875rem;
-  font-family: var(--fonte-bold);
-  font-size: 1rem;
-  border-radius: 1.5rem;
-}
-
-.reset {
-  align-items: center;
-  justify-content: center;
-  margin-top: 0.625rem;
-  display: flex;
-  width: 5.25rem;
-  height: 2.625rem;
-  font-family: var(--fonte-bold);
-  font-size: auto;
-  border-radius: 0.9375rem;
-  cursor: pointer;
-}
-
-.reset a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .mensagem-inicial { /* Estilizando a mensagem inicial */

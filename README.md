@@ -120,8 +120,12 @@ A nova estrutura, além de mais concisa, oferece as seguintes vantagens:
 
 **Tela Inicial:**
 
-[Imagem da tela inicial do site com o campo de texto vazio e os botões]
-
+###Vista Desktop
+![Imagem da tela inicial do site com o campo de texto vazio e os botões](<assets/vista principal1.PNG>)
+###Vista tablet
+![Imagem da tela inicial do site com o campo de texto vazio e os botões](<assets/vista principal tablet.PNG>)
+###Vista celular
+![Imagem da tela inicial do site com o campo de texto vazio e os botões](<assets/vista principal celular.PNG>)
 **Após Criptografar:**
 
 [Imagem da tela após a criptografia de um texto, mostrando o resultado]
