@@ -129,6 +129,8 @@ A nova estrutura, além de mais concisa, oferece as seguintes vantagens:
 ### Vista celular
 ![Imagem da tela inicial do site com o campo de texto vazio e os botões](<assets/vista principal celular.PNG>)
 
+### Demonstração
+<video controls src="assets/apresentação site.mp4" title="Title"></video>
 **Após Criptografar:**
 
 [Imagem da tela após a criptografia de um texto, mostrando o resultado]
