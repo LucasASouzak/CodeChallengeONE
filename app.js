@@ -24,7 +24,7 @@ botaoCopiar.addEventListener("click", () => {
     navigator.clipboard.writeText(saidaCodificador.value)
         .then(() => {
           
-        })
+})
         .catch(err => {
             console.error("Falha ao copiar:", err);
         });

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+
 :root {
   --cor-primaria: #E5E5E5;
   --cor-secundaria: #0A3871;
@@ -20,7 +21,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 80vh;
   background-color: var(--cor-primaria);
   font-family: var(--fonte-bold);
 }
