@@ -447,7 +447,7 @@ body {
   .secao-esquerda {
     width: 100%;
     display: flex;
-    margin-bottom: 0.25rem;
+    margin: 1rem 0;
     align-items: center;
     text-align: center;
   }
@@ -504,17 +504,23 @@ body {
   }
 
   .resultado {
-    padding: 1rem;
+    padding: 0;
   }
 
   .resultado textarea {
+    text-align: center;    
     font-size: 0.9rem;
   }
-
-  .botao-copiar {
+  .botoes-container{
+    justify-content: center;
+    flex-direction: row;
+  }
+  .botao-copiar, .reset {
     max-width: 40%;
     border-radius: 1rem;
     font-size: 1rem;
+    justify-content: center;
+    
   }
 
   .imagem-busca {
@@ -526,6 +532,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 5.25rem;
+    height: 5rem;
   }
+  
 }
