@@ -109,7 +109,7 @@ A nova estrutura, além de mais concisa, oferece as seguintes vantagens:
 
 ## Como Usar o Decodificador de Texto
 
-1. **Acesse o Site:** Abra site em: https://lucasasouzak.github.io/CodeChallengeONE/ seu navegador da web.
+1. **Acesse o Site:** Para acessr o click em site em: https://lucasasouzak.github.io/CodeChallengeONE/.
 2. **Insira o Texto:** Digite ou cole a mensagem no campo de entrada.
 3. **Escolha a Operação:** Clique em "Criptografar" ou "Descriptografar".
 4. **Visualize o Resultado:** O resultado será exibido na seção de saída.
