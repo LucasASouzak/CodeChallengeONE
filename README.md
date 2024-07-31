@@ -1,6 +1,9 @@
 # Decodificador de Texto
 
-## Desafio One e Alura
+<h2>
+  <img src="Prancheta 3.png" alt="Decodificador de Texto" style="width: 200px; float: left; margin-right: 10px;">
+  Desafio One e Alura
+</h2>
 ![Insignia do desafio](<Prancheta 3.png>)
 
 Este projeto implementa um Decodificador de Texto simples e interativo, construído com HTML, CSS e JavaScript. Ele permite aos usuários criptografar e descriptografar mensagens com base em um conjunto de regras de substituição de vogais, proporcionando uma experiência divertida e levemente codificada. 
