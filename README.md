@@ -1,9 +1,6 @@
 # Decodificador de Texto
 
 
-
-<div><img src="Prancheta 3.png" alt="Decodificador de Texto" style="width: 100px; float: left; margin-right: 10px;"></div>
-
 ## Desafio One e Alura
 
 Este projeto implementa um Decodificador de Texto simples e interativo, construído com HTML, CSS e JavaScript. Ele permite aos usuários criptografar e descriptografar mensagens com base em um conjunto de regras de substituição de vogais, proporcionando uma experiência divertida e levemente codificada. 
@@ -171,3 +168,4 @@ LucasASouzak
 ## Licença
 
 Este projeto é disponibilizado sob a licença GPLv3, garantindo a liberdade de usar, estudar, modificar e redistribuir o software, e assegurando que todos os derivados permaneçam livres.
+<div><img src="Prancheta 3.png" alt="Decodificador de Texto" style="width: 100px; float: left; margin-right: 10px;"></div>
