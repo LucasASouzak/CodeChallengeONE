@@ -133,15 +133,15 @@ A nova estrutura, além de mais concisa, oferece as seguintes vantagens:
 
 **Após Criptografar:**
 
-[Imagem da tela após a criptografia de um texto, mostrando o resultado]![Imagem da tela após a criptografia de um texto, mostrando o resultado](<assets/vista principal1Cripto.PNG>)
+![Imagem da tela após a criptografia de um texto, mostrando o resultado](<assets/vista principal1Cripto.PNG>)
 
-[Imagem da tela após a criptografia de um texto, mostrando o resultado](<assets/vista principal tabletCripto.PNG>)
+![Imagem da tela após a criptografia de um texto, mostrando o resultado](<assets/vista principal tabletCripto.PNG>)
 
-[Imagem da tela após a criptografia de um texto, mostrando o resultado](<assets/vista principal celularCripto.PNG>)
+![Imagem da tela após a criptografia de um texto, mostrando o resultado](<assets/vista principal celularCripto.PNG>)
 
 **Após Descriptografar:**
 
-[Imagem da tela após a descriptografia de um texto, exibindo a mensagem original](<assets/vista principal1DesCripto.PNG>)
+![Imagem da tela após a descriptografia de um texto, exibindo a mensagem original](<assets/vista principal1DesCripto.PNG>)
 
 
 ## Observações
