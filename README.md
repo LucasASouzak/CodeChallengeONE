@@ -141,7 +141,7 @@ A nova estrutura, além de mais concisa, oferece as seguintes vantagens:
 
 **Após Descriptografar:**
 
-[Imagem da tela após a descriptografia de um texto, exibindo a mensagem original]
+[Imagem da tela após a descriptografia de um texto, exibindo a mensagem original](<assets/vista principal1DesCripto.PNG>)
 
 
 ## Observações
