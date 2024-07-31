@@ -166,4 +166,4 @@ LucasASouzak
 
 ## Licença
 
-Este projeto é disponibilizado sob a licença MIT, incentivando a colaboração e o uso livre do código.
+Este projeto é disponibilizado sob a licença GPLv3, garantindo a liberdade de usar, estudar, modificar e redistribuir o software, e assegurando que todos os derivados permaneçam livres.
